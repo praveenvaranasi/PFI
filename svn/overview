@@ -1,0 +1,59 @@
+Topics:
+
+1. Checkout (svn co <url>)
+   Checkout a specific revision (svn co -r <number> <link>) 
+2. Add (svn add <filepath>)
+3. Reverting to Previous revision (svn merge -r <urn>:<lrn> <fie-name)
+   Reverting a modified file in wc (svn revert <file-name>)
+4. Commit (svn ci -m "<msg>")
+5. Branch and Tag Creation (svn copy <source> <destination folder>)
+6. Merge 
+   From branch to trunk:
+		1. Get Inside the trunk and get the revision number (rn) from what the branch has made
+		2. perform this
+			svn merge -r <rn>:<branches last revision> .			
+7. Conflict - Gets when updating the working copy (wc - with changes, server - next revision, Conflict occurs when updating the working copy now)
+   - Can be resolved using the options provided. (better to use merge tool)
+8. Hooks - You know how to configure.
+   - Goto the repository. go inside hooks
+   - Place the code inside "post-commit" hook and rename it to "post-commit from post-commit.tmpl"
+   - This is enough
+   - Get to know about the different hooks present
+
+   
+SVN REPO DIRECTORY STRUCTURE IN THE SERVER
+
+.:
+conf  db  format  hooks  locks  README.txt
+
+./conf:
+authz  hooks-env.tmpl  passwd  svnserve.conf
+
+./db:
+current  fsfs.conf  min-unpacked-rev  rep-cache.db-journal  revs          txn-current       txn-protorevs  write-lock
+format   fs-type    rep-cache.db      revprops              transactions  txn-current-lock  uuid
+
+./db/revprops:
+0
+
+./db/revprops/0:
+0  1  10  11  12  13  14  15  16  17  18  19  2  20  21  22  23  24  25  3  4  5  6  7  8  9
+
+./db/revs:
+0
+
+./db/revs/0:
+0  1  10  11  12  13  14  15  16  17  18  19  2  20  21  22  23  24  25  3  4  5  6  7  8  9
+
+./db/transactions:
+
+./db/txn-protorevs:
+
+./hooks:
+post-commit    post-lock.tmpl            post-unlock.tmpl  pre-lock.tmpl            pre-unlock.tmpl
+post-commitss  post-revprop-change.tmpl  pre-commit.tmpl   pre-revprop-change.tmpl  start-commit.tmpl
+
+./locks:
+db.lock  db-logs.lock
+
+
