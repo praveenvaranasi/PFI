@@ -1,0 +1,60 @@
+Topics:
+
+1. GIT Repo creation (git init [<repo-name>])
+2. GIT Basics
+	* Checking the "status/short status" of your files  (git status [-s])
+	* Tracking new files && Staging modified files (git add)
+	* Ignoring files (.gitignore)
+	* Viewing Staged/Unstaged Changes (git diff [-cached])
+	* Committing your changes && skipping the staging area (git commit [-a] [-m <msg>])
+	* Removing Files "completely / from staging"(git rm <filename> )
+	* Moving Files (git mv <from> <to-name>)
+3. Viewing the commit history (git log [-n <number>]/[--pretty=[oneline]])
+4. Undoing things
+	* Rectifying commit (git commit --ammend)
+	* Unstaging a staged file (git reset HEAD <file-name)
+	* Unmodifying a modified file (git checkout -- <file-name>)
+5. Working with Remotes
+	* Showing your remotes (git remote [-v])
+	* Adding remote repos (git remote add <remote-name> <url>)
+	* fetching & pulling remote repos (git fetch <remote-name> & git pull <remote-name>)
+	* Pushing to your remotes (git push <remote> <branch>) ex: git push origin master
+	* Inspecting a remote (git remote show <remote-name>)
+	* Removing & Renaming the remotes (git remote rename <from> <to-name> && git remote remove <remote-name>)
+6. Tagging
+	* listing the tags (git tags)
+	* creating annotated tags (git tag -a <tag-name> -m <commit-msg>) - Stored as full objects in db
+	* creating lightweight tags (git tag <tag-name> -lw ) - Just a pointer sets to the commit object
+	* Tagging later (git tag -a <tag-name> <checksum>)
+	* Sharing Tags (git push <remote-name> <tag-name>)
+	  - Pushing all @ once (git push <remote-name> --tags)
+	* Deleting tags (git tag -d <tag-name>)
+	* Checking out tags - Commits are recorded but cant be shown in history. So create a branch out of it
+	  - git branch -b <branch> <tag-name> = git branch <branch> <tag-name> && git checkout <branch>
+7. Git aliases - (git config --global alias.co clone)
+8. Branches in a nutshell
+	* 
+	*
+	*		CommitObject ---> Snapshot(tree) ---> Blobs (one blob for each file)
+	*		TREE, author		blob & its		  changes
+	*		committer, 			checksums
+	*		commit msg
+9. Creating a New Branch (git branch <branch-name>)
+10. Switching b/n branches (git checkout <branch-name>) 
+	* to check the graph (git log --oneline --decorate)
+11. Basic Branching & merging
+	* shortcut - git checkout -b <branch>
+	* delete branch - git branch -d <branch>
+	* merging - git merge <branch>
+	  - goto the branch with previous/past commits and get the new branch merged
+	  - then delete the branch merged into base if needed
+	* merge conflicts can be resolved usign cli configured tools
+12. Branch Management
+	* list the branches (git branch)
+	* To see the last commit on each branch (git branch -v)
+	* To see the merged branches (git branch --merged)
+	* To see the non merged branches (git branch --no-merged)
+13. Topic branches (short-lived branches ex: iss53)
+14. 
+15. Rebase
+	* 
