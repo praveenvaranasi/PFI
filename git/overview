@@ -55,6 +55,11 @@ Topics:
 	* To see the merged branches (git branch --merged)
 	* To see the non merged branches (git branch --no-merged)
 13. Topic branches (short-lived branches ex: iss53)
-14. 
+14. Branching - Remote Branches
+	* master in wc --> origin/master in server
+		- "master branch" in server is RemoteBranch
+		- "origin/master branch" in server is said to be Remote tracking branch
+	* we can fetch more than one remote in our working copies (think of creating remote from master, push it and fetch into wc)
+	
 15. Rebase
 	* 
