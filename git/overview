@@ -55,11 +55,39 @@ Topics:
 	* To see the merged branches (git branch --merged)
 	* To see the non merged branches (git branch --no-merged)
 13. Topic branches (short-lived branches ex: iss53)
-14. Branching - Remote Branches
+14. Remote Branches
 	* master in wc --> origin/master in server
 		- "master branch" in server is RemoteBranch
 		- "origin/master branch" in server is said to be Remote tracking branch
 	* we can fetch more than one remote in our working copies (think of creating remote from master, push it and fetch into wc)
+15. Pushing Branches
+	* git push <remote> <branch> - pushes the commits into the server (git push origin serverfix:serverfix, git push origin serverfix:awesomebranch)
+	* git push - automatically detects and pushes the commits
+	* git fetch origin
+	  remote: Counting objects: 7, done.
+	  remote: Compressing objects: 100% (2/2), done.
+	  remote: Total 3 (delta 0), reused 3 (delta 0)
+	  Unpacking objects: 100% (3/3), done.
+	  From https://github.com/schacon/simplegit
+	  * [new branch]      serverfix    -> origin/serverfix
+	  
+	  To work on serverfix, do either of these
+		- git merge origin/serverfix
+		- git checkout -b serverfix origin/serverfix (as its there in local wc)
+16. Deleting remote branches (git push <remote(origin)> --delete <branch-name>)	
+17. Tracking Branches
+	* Checking a local branch from a remote-tracking branch automatically creates a branch called "Tracking branch"
+	git checkout -b <branch> <remote>/<branch> (git checkout -b serverfix origin/serverfix)
+	~ 	git checkout --track origin/serverfix
+	~	git checkout serverfix
+	~	git branch -u origin/serverfix			- This is nothing but setting the existing local branch to the desired remote branch
+	~	git checkout -b sf origin/serverfix
 	
-15. Rebase
-	* 
+	* To see tracking branches we have setup. Along with that this ll list the local branches with the info. including 'what each branch is tracking'
+	  and if your local branch  is ahead, behind or both
+	  
+	  git branch -vv (tells according to the Info. obtained from last time server communication)
+	  git fecth --all ; git branch -vv (gives the updated info)
+28. Rebasing
+	* In experiment: git rebase master ; git checkout master ; git merge experiment
+	  
