@@ -30,7 +30,7 @@ Topics:
 	  - Pushing all @ once (git push <remote-name> --tags)
 	* Deleting tags (git tag -d <tag-name>)
 	* Checking out tags - Commits are recorded but cant be shown in history. So create a branch out of it
-	  - git branch -b <branch> <tag-name> = git branch <branch> <tag-name> && git checkout <branch>
+	  - git checkout -b <branch> <tag-name> = git branch <branch> <tag-name> && git checkout <branch>
 7. Git aliases - (git config --global alias.co clone)
 8. Branches in a nutshell
 	* 
@@ -49,7 +49,7 @@ Topics:
 	  - Checkout the branch you merge into and run 'git merge' command
 	  - goto the branch with previous/past commits and get the new branch merged
 	  - then delete the branch merged into base if needed
-	* merge conflicts can be resolved usign cli configured tools
+	* merge conflicts can be resolved using cli configured tools
 12. Branch Management
 	* list the branches (git branch)
 	* To see the last commit on each branch (git branch -v)
