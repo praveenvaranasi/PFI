@@ -54,3 +54,23 @@ Overriding:
 	- Constructors cant be overridden
 
 Polymorphism:
+
+	Polymorphism is the abiility to take on many forms. The most common use of polymorphism in OOP occurs when a ParentClass reference is used
+	to refer to a ChildClass Object
+	
+	public class VirtualDemo {
+
+		public static void main(String [] args) {
+			Salary s = new Salary("Mohd Mohtashim", "Ambehta, UP", 3, 3600.00);  # Here the ReferenceType are different (ObjectTypes are same)
+			Employee e = new Salary("John Adams", "Boston, MA", 2, 2400.00);	 #  where as in overriding the Object types are different (RTs are same)
+			System.out.println("Call mailCheck using Salary reference --");   	 # Salary - DerivedClass, Employee - BaseClass
+			s.mailCheck();
+			System.out.println("\n Call mailCheck using Employee reference--");
+			e.mailCheck();
+		}
+	}
+	
+	The behaviour is referred to as Virtual method invocation, and these methods are referred to as Virtual methods. An Overridden method is invoked 
+	at runtime, no matter what data type the reference is that was used in the source code at compile time
+	
+	
