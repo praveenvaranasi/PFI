@@ -1,0 +1,56 @@
+Access Specifiers
+	AS			C	P	S	W
+	Public		y	y	y	y
+	Protected	y	y	y
+	No modifier y	y
+	Private		Y
+
+
+Oops Concepts:
+
+Inheritance:
+- The process of acquiring the process of properties from one class (parent/base/super class) into another class(child/derived/sub class) using "extends" keyword
+1. "Super" keyword 
+   - is used to differentiate the members(variables & methods) of Super class from the Subclass if they are having same names (super.<method()/variable>
+   - is also used to invoke the Superclass constructor from Subclass (super())
+2. Types: Single Inheritance (Single level)
+		  Mutli level Inheritance (multiple level)
+		  Hierarchichal Inheritance (class sub extends Base, class sub1 extends Base)
+		  MULITPLE INHERITANCE is implemented through Interfaces
+		  
+Overriding:		  
+- Ability to define a behaviour thats specific to Subclass type, which means a Subclass can implement Parentclass method based on its requirement (Overriding means 
+  overriding the functionality of an existing method)
+    
+	public class TestDog {
+
+      public static void main(String args[]) {
+        Animal a = new Animal();   // Animal reference and object		# "Animal is the BaseClass" and "Dog is the DerivedClass"
+        Animal b = new Dog();   // Animal reference but Dog object		# "TestDog" Class is in the same Package
+
+        a.move();   // runs the method in Animal class
+        b.move();   // runs the method in Dog class
+      }
+    }
+
+	At compile time, the check is made on the ReferenceType(Class). But on the runtime the Check is made on the ObjectType(Constructor)
+	
+- 	  { 
+		Animal a = new Animal();   // Animal reference and object    # Animal Class(Base) methods - move()
+		Animal b = new Dog();   // Animal reference but Dog object	 # Dog Class(Sub) methods - move(), bark()
+
+		a.move();   // runs the method in Animal class
+		b.move();   // runs the method in Dog class
+		b.bark(); 
+	  }													# Throws compile error Since b's reference type Animal doesnt have bark() method
+	  
+	- Arg. list should be same as that of the Overridden method
+	- ReturnType should be same or subtype of the "ReturnType declared in the Original Overridden method in the Superclass"
+	- Access level cant be more restrictive than the Overridden method's access level
+	-*** Instance methods can be overridden only if they're inherited by the Subclass 
+	- A method declared 'final' cant be overridden. But declared static cant be overridden but can be re-declared
+	- A Subclass with in the same pkg as the Instance's superclass can override any superclass method that s not declared 'private or final'
+	- A Subclass in a diff. pkg. can only override the non-final methods declared public or protected
+	- Constructors cant be overridden
+
+Polymorphism:
