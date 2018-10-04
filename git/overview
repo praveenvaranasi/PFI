@@ -7,7 +7,7 @@ Topics:
 	* Ignoring files (.gitignore)
 	* Viewing Staged/Unstaged Changes (git diff [-cached])
 	* Committing your changes && skipping the staging area (git commit [-a] [-m <msg>])
-	* Removing Files "completely / from staging"(git rm <filename> )
+	* Removing Files "completely / from staging"(git rm [--cached] <filename>)
 	* Moving Files (git mv <from> <to-name>)
 3. Viewing the commit history (git log [-n <number>]/[--pretty=[oneline]])
 4. Undoing things
