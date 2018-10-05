@@ -73,4 +73,33 @@ Polymorphism:
 	The behaviour is referred to as Virtual method invocation, and these methods are referred to as Virtual methods. An Overridden method is invoked 
 	at runtime, no matter what data type the reference is that was used in the source code at compile time
 	
+Abstraction:
+	
+	Abstraction is a process of hiding the implementation details from the user, Only the functionality ll be provided to the user
+	- User ll have the information of what the object does, instead of how it does it
+	- Abstraction is achieved using Abstract Classes and Interfaces
+	
+	- To use an abstract class (declared as abstract class if it contains one abstract method / Abstract class may or may not contain Abstract methods)
+	  we need to Inherit into another class, provide implementations to the abstract methods and use 'em from the object of derived class
+	  
+	ex: public abstract void check();  // Abstract method is nothing but a method without body
+	
+		public abstract class Employee { .. } // Abstract class declaration
+	
+Encapsulation:
+
+	It s a mechanism of wrapping up of data (Variables) and code acting on the data (methods) together as a single unit. In Encapsulation, the variables
+	of a class ll be hidden from other classes, and can be accessed through the methods of their current class. Therefore it s known as "DataHiding"
+	
+	To achieve Encapsulation:
+	- Declare the Variables of the class as Private
+	- Provide public getter and setter methods to modify and view the Variables Values
+	
+	Benefits of Encapsulation
+	- The fields of a class can be made read-only /  write-only
+	- A Class can have total control what is stored in its fields
+	
+
+	  
+	  
 	
