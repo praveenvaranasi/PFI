@@ -99,6 +99,21 @@ Encapsulation:
 	- The fields of a class can be made read-only /  write-only
 	- A Class can have total control what is stored in its fields
 	
+Interface:
+
+	Interface is a collection of Abstract Methods. Its a reference type in Java. 
+	- Interface cant be instantiated. It cant be Inherited into a Class. But it can be INHERITED into ANOTHER INTERFACE. Class has to implement the Interface
+	and need to define all the abstract methods which were in Interface. 
+	- Interface may also contain Constants, Static methods and nested types.
+	- Interface cant contain Constructors
+	
+	ex: public interface NameOfInterface {  ..  } // FileName: NameOfInterface.java
+	
+		public class Praveen implements NameOfInterface [, <Interface2>] //Class can implement any n.of Intefaces but can extend only one (satisfies multiple Inheritance)
+		
+		
+	- 
+	
 
 	  
 	  
