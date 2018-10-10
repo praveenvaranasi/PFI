@@ -1,0 +1,22 @@
+<project name="defTasks" default="userTasks" basedir=".">
+	
+	<macrodef name="compile" description="This is an Userdefined Task">
+		<attribute name="srcdir"/>
+		<attribute name="destdir"/>
+		<attribute name="jardest"/>
+		<element name="jardir"/>
+		<sequential>
+			<javac srcdir="@{srcdir}" destdir="@{destdir}"/>
+			<jar destfile="@{jardest}" basedir="@{destdir}" excludes="**/*.jar"/>
+		</sequential>
+	</macrodef>
+	
+	<target name="userTasks">
+		<compile srcdir="D:\Career\PFI\java\src\src" destdir="D:\Career\PFI\java\src\src\classes" 
+		jardest="D:\Career\PFI\java\src\src\classes\Jars\macro.jar">
+			<jardir>
+				<echo message="You're good with macrodef"/>
+			</jardir>
+		</compile>
+	</target>
+</project>
