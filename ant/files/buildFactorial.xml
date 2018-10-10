@@ -1,0 +1,17 @@
+<project name="build" default="buildSrc" basedir=".">
+	<description>This build.xml is used to build a Java file </description>
+	<property name="srcdir" value="${ant.file.build}/../../../java/src/src"/>
+	<property name="destdir" value="${ant.file.build}/../../files/classes"/>
+	
+	<target name="buildFactorial">
+		<echo message="Building java source files in ${srcdir}"/>
+		<javac srcdir="${srcdir}" destdir="${destdir}"/>
+		<jar destfile="${ant.file.build}/../jars/fact.jar" basedir="${destdir}">
+			<manifest>
+				<attribute name="Main-Class" value="Factorial"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="buildSrc" depends="buildFactorial"/>
+</project>

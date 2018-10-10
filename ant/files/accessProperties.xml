@@ -1,0 +1,24 @@
+<project name="diffProperties"  default="reviseProps" basedir=".">
+	
+	<description>ant -f accessProperties.xml -Dcli="This is from cli" -propertyfile propFiles/rtbuild.properties</description>
+	<property name="frmXmlProp" value="Value of the property from the build file itself"/>
+	<property file="propFiles/build.properties"/>
+	
+	<target name="frmXml">
+		<echo message="${frmXmlProp}"/>
+	</target>
+	
+	<target name="frmPropFile">
+		<echo message="${propFromFile}"/>
+	</target>
+	
+	<target name="fromCli">
+		<echo message="${cli}"/>
+	</target>
+	
+	<target name="fromCliPropFile">
+		<echo message="${pfcf}"/>
+	</target>
+	
+	<target name="reviseProps" depends="frmXml, frmPropFile, fromCli, fromCliPropFile"/>
+</project>

@@ -1,0 +1,3 @@
+Tasks:
+javac (srcdir, destdir)
+jar (destfile, basedir)
