@@ -1,0 +1,6 @@
+<project name="buildCT" default="CT" basedir=".">
+	<target name="CT">
+		<javac srcdir="." destdir="classes"/>
+		<jar destfile="classes/ct.jar" basedir="classes" excludesfile="classes/Factorial.class"/>
+	</target>
+</project>

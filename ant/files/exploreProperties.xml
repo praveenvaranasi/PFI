@@ -1,0 +1,18 @@
+<project name="run" default="testRun" basedir=".">
+ <property file="build.properties"/>
+ <property name="PFF" value="PropertyFromFile"/>
+ <target name="testRun">
+	<echo message="${PFF}"/>
+	<echo message="${cli}"/>
+	<echo message="${PFPF}"/>
+	<propertyfile file="build.properties">
+		<entry key="PFPF" value="Check"/>
+	</propertyfile>
+ </target>
+ <target name="check">
+	<exec executable="sh">
+		<arg value="-c"/>
+		<arg value="pwd"/>
+	</exec>
+ </target>
+</project>

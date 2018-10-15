@@ -1,0 +1,6 @@
+<project name="newTask" default="callNewTask" basedir=".">
+ <taskdef name="ct" classname="CustomTask"/>
+ <target name="callNewTask">
+	<ct/>
+ </target>
+</project>
