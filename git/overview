@@ -89,7 +89,7 @@ Topics:
 	  
 	  git branch -vv (tells according to the Info. obtained from last time server communication)
 	  git fecth --all ; git branch -vv (gives the updated info)
-28. Rebasing
+18. Rebasing
 	* In experiment: git rebase master ; git checkout master ; git merge experiment
 	  - Whatever the branch you wish to rebase onto other (master), checkout the branch and then rebase (git rebase master)
 	  - Whatever the branch you wish to merge into, checkout the branch (master) and perform the command 'git merge <branch-name>' (git merge experiment)
