@@ -103,3 +103,14 @@ Topics:
 	  - git rebase <baseBranch> <topicBranch>
 	  - checksout the topicBranch and then rebases the Base Branch
 	  
+Info: 
+	When cloned a repository from git, we will not be getting all the branches excpet master. To work on the other branches with those changes..
+	- git clone <url>
+	- git checkout -b <branch-name> --track origin/<branch-name>
+	
+	Cloning a Single branch: 
+	- git clone --single-branch -branch <branch-name> <url>
+	
+	To set the different tracking remote for the local branch
+	- git push --set-upstream origin <branch-name>
+	  
