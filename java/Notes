@@ -9,7 +9,7 @@ Access Specifiers
 Oops Concepts:
 
 Inheritance:
-- The process of acquiring the process of properties from one class (parent/base/super class) into another class(child/derived/sub class) using "extends" keyword
+- The process of acquiring the properties from one class (parent/base/super class) into another class(child/derived/sub class) using "extends" keyword
 1. "Super" keyword 
    - is used to differentiate the members(variables & methods) of Super class from the Subclass if they are having same names (super.<method()/variable>
    - is also used to invoke the Superclass constructor from Subclass (super())
@@ -19,8 +19,7 @@ Inheritance:
 		  MULITPLE INHERITANCE is implemented through Interfaces
 		  
 Overriding:		  
-- Ability to define a behaviour thats specific to Subclass type, which means a Subclass can implement Parentclass method based on its requirement (Overriding means 
-  overriding the functionality of an existing method)
+- Ability to define a behaviour thats specific to Subclass type, which means a Subclass can implement Parentclass method based on its requirement (Overriding means overriding the functionality of an existing method)
     
 	public class TestDog {
 
@@ -55,7 +54,7 @@ Overriding:
 
 Polymorphism:
 
-	Polymorphism is the abiility to take on many forms. The most common use of polymorphism in OOP occurs when a ParentClass reference is used
+	Polymorphism is the ability to take on many forms. The most common use of polymorphism in OOP occurs when a ParentClass reference is used
 	to refer to a ChildClass Object
 	
 	public class VirtualDemo {

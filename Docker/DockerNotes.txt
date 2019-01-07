@@ -1,0 +1,60 @@
+Docker:
+- Docker cli --->  REST API  ---> dockerd(docker server)
+- Docker client can communicate with other Docker daemons.  Also dockerd can communicate with other dokcerd to manage docker services
+- Docker Data center (DCC) has "Docker Trusted Registry (DTR)"(similar to Docker Hub)
+
+
+
+Docker tips: 
+1. Saving the image as a docker file using "docker save -o <tar filename> <image-name>"
+2. copy the tar file wherever you need
+3. load the image using "docker load -i <tar filename>"
+
+Docker Notes:
+
+1. docker run -i -t <image>
+    -i : runs the container in Interactive mode
+    -t : allocates a pseudo-tty terminal to the user
+2. docker build <path for Dockerfile dir> -t <tag-name>[:version] - gives image 
+3. docker image ls - 	Repo(tag-name) 	  tag(version)		Image-ID
+4. docker run -p <host-port>:<exposed port in docker> <image-Repo(tagname)> : keeps running in terminal 
+5. docker run -d -p <host-port>:<exposed-port> <image-repo> : runs in bg and releases the terminal(gives long containerID)
+	4,5 - gives container
+6. docker container ls ---> containerID		Image(Image-repo)		command		created
+7. docker container start/stop <container-id>
+8. Share the image: 
+	* docker login
+	* docker tag image(repo(tag-name)) <username>/<repository>:<tag>
+	* docker image ls ---> Repo(<un>/<repo>)		Tag<tag>		ImageId		Created		size
+	* docker push username/repository:tag
+9. docker run <username/repository:tag>
+
+
+docker services:
+
+1. docker swarm init --> becomes manager
+2. docker stack deploy -c docker-compose.yml <app-name>  --> Deploys the web service stack that runs 5(<replicas>) container instances of 
+   our deployed image on one host
+   
+   - services stack name will be "<app-name>_web" (<app-name>_<service>)
+3. docker service ls --> lists the services deployed in the stack 
+	- A single container running in a service is called "Task"
+4. docker service ps <app-name>  --> Lists the tasks for our service
+5. Scaling is performed by just changing the replica value and redeploying the stack using "Step 2"
+6. docker stack rm <app-name> --> removes stack
+7. docker swarm leave --force --> Take down the swarm manager
+
+Docker Swarm (clusters - deploying services on the multiple machines into a Dockerized cluster called Swarm):
+
+1. Swarm Manager (~master)  - Swarm workers(~Slaves) -->together are called as nodes
+2. docker swarm init (to become manager) --> gives a token
+3. docker swarm join --token <manager's - token> <ip>:2377
+
+   2376 - docker daemon(dockerd)'s port
+   2377 - port on which docker manager and workers operate upon
+
+Docker Stacks:
+
+1. A stack consists of more than one services. 
+
+Networking:
