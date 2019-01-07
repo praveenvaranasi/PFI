@@ -39,6 +39,8 @@ Topics:
 	*		TREE, author		blob & its		  changes
 	*		committer, 			checksums
 	*		commit msg
+	*
+	*
 9. Creating a New Branch (git branch <branch-name>)
 10. Switching b/n branches (git checkout <branch-name>) 
 	* to check the graph (git log --oneline --decorate)
@@ -89,13 +91,9 @@ Topics:
 	  
 	  git branch -vv (tells according to the Info. obtained from last time server communication)
 	  git fecth --all ; git branch -vv (gives the updated info)
-<<<<<<< HEAD
-28. Rebasing
-	* In experiment branch: git rebase master ; git checkout master ; git merge experiment
-=======
+
 18. Rebasing
-	* In experiment: git rebase master ; git checkout master ; git merge experiment
->>>>>>> 29e796312125d1d53b6ead8e42d15b531464ec27
+	* In experiment branch: git rebase master ; git checkout master ; git merge experiment
 	  - Whatever the branch you wish to rebase onto other (master), checkout the branch and then rebase (git rebase master)
 	  - Whatever the branch you wish to merge into, checkout the branch (master) and perform the command 'git merge <branch-name>' (git merge experiment)
 	* git rebase --onto master server client
