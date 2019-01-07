@@ -5,7 +5,7 @@ Topics:
 	* Checking the "status/short status" of your files  (git status [-s])
 	* Tracking new files && Staging modified files (git add)
 	* Ignoring files (.gitignore)
-	* Viewing Staged/Unstaged Changes (git diff [-cached])
+	* Viewing Staged/Unstaged Changes (git diff [--cached])
 	* Committing your changes && skipping the staging area (git commit [-a] [-m <msg>])
 	* Removing Files "completely / from staging"(git rm [--cached] <filename>)
 	* Moving Files (git mv <from> <to-name>)
@@ -46,7 +46,7 @@ Topics:
 	* shortcut - git checkout -b <branch>
 	* delete branch - git branch -d <branch>
 	* merging - git merge <branch>
-	  - Checkout the branch you merge into and run 'git merge' command
+	  - Checkout the branch you merge into (master) and run 'git merge' command
 	  - goto the branch with previous/past commits and get the new branch merged
 	  - then delete the branch merged into base if needed
 	* merge conflicts can be resolved using cli configured tools
@@ -90,7 +90,7 @@ Topics:
 	  git branch -vv (tells according to the Info. obtained from last time server communication)
 	  git fecth --all ; git branch -vv (gives the updated info)
 28. Rebasing
-	* In experiment: git rebase master ; git checkout master ; git merge experiment
+	* In experiment branch: git rebase master ; git checkout master ; git merge experiment
 	  - Whatever the branch you wish to rebase onto other (master), checkout the branch and then rebase (git rebase master)
 	  - Whatever the branch you wish to merge into, checkout the branch (master) and perform the command 'git merge <branch-name>' (git merge experiment)
 	* git rebase --onto master server client
