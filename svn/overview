@@ -21,7 +21,7 @@ Topics:
    - Get to know about the different hooks present
 
    
-SVN REPO DIRECTORY STRUCTURE IN THE SERVER. 
+SVN REPO DIRECTORY STRUCTURE IN THE SERVER
 
 .:
 conf  db  format  hooks  locks  README.txt
