@@ -110,3 +110,6 @@ GIT Tips:
 2. Reverting the Repo 
 	- git revert HEAD~<n.of commits>
 	  
+git clone --single-branch --branch maven https://PraveenVaranasiCG@bitbucket.org/PraveenVaranasiCG/devops.git
+
+git push --set-upstream origin ok
